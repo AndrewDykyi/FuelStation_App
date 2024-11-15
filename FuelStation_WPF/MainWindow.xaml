@@ -1,0 +1,44 @@
+﻿<Window x:Class="FuelStation_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Fuel Station Management" Height="450" Width="800">
+    <Grid Margin="0,0,-73,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" Grid.Row="0">
+            <Button Content="Load Users" Click="LoadUsers_Click" Margin="5"/>
+            <Button Content="Load Vehicles" Click="LoadVehicles_Click" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,72,0">
+            <ListBox x:Name="UsersListBox" Width="300" Margin="5" DisplayMemberPath="Name" />
+
+            <StackPanel Orientation="Vertical" Margin="10">
+                <TextBlock Text="User Name:" Margin="5"/>
+                <TextBox x:Name="UserNameTextBox" Margin="5"/>
+                <TextBlock Text="User Email:" Margin="5"/>
+                <TextBox x:Name="UserEmailTextBox" Margin="5"/>
+                <Button Content="Add User" Click="AddUser_Click" Margin="5"/>
+                <Button Content="Delete User" Click="DeleteUser_Click" Margin="5"/>
+            </StackPanel>
+
+            <ListBox x:Name="VehiclesListBox" Width="300" Margin="5" DisplayMemberPath="Model" />
+
+            <StackPanel Orientation="Vertical" Margin="10">
+                <TextBlock Text="Vehicle Model:" Margin="5"/>
+                <TextBox x:Name="VehicleModelTextBox" Margin="5"/>
+                <TextBlock Text="Vehicle License Plate:" Margin="5"/>
+                <TextBox x:Name="VehicleLicensePlateTextBox" Margin="5"/>
+                <TextBlock Text="Customer Name:" Margin="5"/>
+                <TextBox x:Name="VehicleCustomerNameTextBox" Margin="5"/>
+                <TextBlock Text="Fuel Type:" Margin="5"/>
+                <TextBox x:Name="VehicleFuelTypeTextBox" Margin="5"/>
+                <Button Content="Add Vehicle" Click="AddVehicle_Click" Margin="5"/>
+                <Button Content="Delete Vehicle" Click="DeleteVehicle_Click" Margin="5"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
